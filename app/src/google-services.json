@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "519944768119",
+    "project_id": "atcadaptor",
+    "storage_bucket": "atcadaptor.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519944768119:android:63140f18d4ea95500e9472",
+        "android_client_info": {
+          "package_name": "com.anhar.atcadaptor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDaKPo-VYNGrcLM7yslf5f-0tQtUQn0TM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519944768119:android:57408f8d4ea6e24c0e9472",
+        "android_client_info": {
+          "package_name": "com.youppix.atcadaptor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDaKPo-VYNGrcLM7yslf5f-0tQtUQn0TM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

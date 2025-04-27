@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name" translatable="false">ATC Adaptor</string>
+    <string name="continuee">Continue</string>
+    <string name="selectLanguage">Select Language</string>
+    <string name="english">English</string>
+    <string name="arabic">Arabic</string>
+    <string name="signin">Sign In</string>
+    <string name="welcomeBack">Welcome back</string>
+    <string name="signInBodyText">Sign in with your email and password or continue as a guest</string>
+    <string name="signUpBodyText">Sign up with your information or continue with social networks</string>
+    <string name="email">Email</string>
+    <string name="enterYourEmail">Enter your email</string>
+    <string name="userName">Username</string>
+    <string name="enterYourUserName">Enter your username</string>
+    <string name="phone">Phone</string>
+    <string name="enterYourPhone">Enter your phone number</string>
+    <string name="password">Password</string>
+    <string name="enterYourPassword">Enter your password</string>
+    <string name="rememberMe">Remember me</string>
+    <string name="forgotPassword">Forgot password</string>
+    <string name="dontHaveAnAccount">Don\'t have an account?</string>
+    <string name="signup">Sign Up</string>
+    <string name="alreadyHaveAccount">Already have an account?</string>
+    <string name="welcomeToOurCommunity">Welcome to our community</string>
+    <string name="forgotPasswordBodyText">Enter your email to reset your password</string>
+    <string name="checkEmail">Check email</string>
+    <string name="resetPassword">Reset password</string>
+    <string name="resetPasswordBodyText">Enter your new password here</string>
+    <string name="emailEmptyErrorMsg">Please fill in the email field</string>
+    <string name="passwordEmptyErrorMsg">Please fill in the password field</string>
+    <string name="userNameEmptyErrorMsg">Please fill in the username field</string>
+    <string name="phoneEmptyErrorMsg">Please fill in the phone field</string>
+    <string name="emailWrongPatternErrorMsg">Invalid email format</string>
+    <string name="userNameWrongPatternErrorMsg">Please enter a valid username</string>
+    <string name="phoneWrongPatternErrorMsg">Please enter a valid phone number</string>
+    <string name="passwordWrongPatternErrorMsg">Password must be more than 6 characters</string>
+    <string name="otpVerification">OTP Verification</string>
+    <string name="confirm">Confirm</string>
+    <string name="verificationBody">Please verify your identity with the OTP code sent to:</string>
+    <string name="goToLoginScreen">Go to login screen</string>
+    <string name="successfullyResetPassword">Password successfully reset</string>
+    <string name="successfullyRegistered">Successfully registered</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="leaveTheApp">Leave the app</string>
+    <string name="doYouReallyWantToLeave">Do you really want to leave the app?</string>
+    <string name="networkStatusAvailable">Connected</string>
+    <string name="networkStatusUnavailable">No internet connection</string>
+    <string name="verifyEmail">Verify email</string>
+    <string name="verifyEmailBody">Please verify your email to sign in</string>
+    <string name="emailVerifiedSuccessfully">Email successfully verified</string>
+    <string name="exit">Exit</string>
+    <string name="search">Search</string>
+    <string name="findYourStyle">Find your style</string>
+    <string name="newArrivals">New arrivals</string>
+    <string name="categories">Categories</string>
+    <string name="flashSalle">Flash sale</string>
+    <string name="seeAll">See all</string>
+    <string name="orderNow">Order now</string>
+    <string name="details">Details</string>
+    <string name="da">DA</string>
+    <string name="seeAllItems">See all items</string>
+    <string name="resetFilter">Reset filter</string>
+    <string name="choseColors">Choose colors</string>
+    <string name="selectPrice">Select price</string>
+    <string name="selectDiscount">Select discount</string>
+    <string name="max">Max</string>
+    <string name="min">Min</string>
+    <string name="selectSize">Select size</string>
+    <string name="totalPrice">Total price</string>
+    <string name="addToCart">Add to cart</string>
+    <string name="wishList">Wishlist</string>
+    <string name="addedToWishlist">Added to wishlist</string>
+    <string name="removedFromWishlist">Removed from wishlist</string>
+    <string name="emptyFavoritesMessage">! You haven\'t saved any items to your wishlist yet</string>
+    <string name="profile">Profile</string>
+    <string name="personalDetails">Personal details</string>
+    <string name="notifications">Notifications</string>
+    <string name="myOrders">My orders</string>
+    <string name="settings">Settings</string>
+    <string name="privacyPolicy">Privacy policy</string>
+    <string name="logout">Logout</string>
+    <string name="language">Language</string>
+    <string name="logoutMessage">Are you sure you want to logout?</string>
+    <string name="save">Save</string>
+    <string name="newPassword">New password</string>
+    <string name="enterYourNewPassword">Enter your new password</string>
+    <string name="updateSuccess">Update successful</string>
+    <string name="wrongPassword">Incorrect password</string>
+    <string name="changePassword">Change password</string>
+    <string name="thisEmailIsNotAvailable">This email is not available</string>
+    <string name="myCart">My cart</string>
+    <string name="promoCode">Promo code</string>
+    <string name="apply">Apply</string>
+    <string name="prixValue">%1$s DA</string>
+    <string name="subTotal">Subtotal</string>
+    <string name="deliveryFee">Delivery fee</string>
+    <string name="discount">Discount</string>
+    <string name="totalCost">Total cost</string>
+    <string name="proceedToCheckout">Proceed to checkout</string>
+    <string name="checkout">Checkout</string>
+    <string name="contactUs">Contact us</string>
+    <string name="completed">Completed</string>
+    <string name="pending">Pending</string>
+    <string name="unfinished">Unfinished</string>
+    <string name="orderStatus">Order status</string>
+    <string name="withoutAnAccount" translatable="false">without account</string>
+    <string name="or">Or</string>
+    <string name="historic" translatable="false">Historic</string>
+
+    <string name="error">An error occurred</string>
+    <string name="ifYouChangeEmailYouMustVerifyIt">If you change your email, you must verify it.</string>
+    <string name="bothPasswordsAreTheSame">Passwords are the same</string>
+    <string name="calculationHistory" translatable="false">Historic of calculations</string>
+    <string name="calculate" translatable="false">Calculate</string>
+    <string name="close" translatable="false">Close</string>
+    <string name="result" translatable="false">Result</string>
+    <string name="calculationSaved" translatable="false">Calculation Saved Successfully</string>
+    <string name="review" translatable="false">Review</string>
+    <string name="leaveReview" translatable="false">leave a review</string>
+    <string name="selectPatient" translatable="false">Select Patient</string>
+    <string name="pleaseSelectPatientErrorMsg" translatable="false">Please select a patient</string>
+    <string name="pleaseFeelAllFeildsBeforeCalculating" translatable="false">Please fill out all fields correctly before calculating.</string>
+</resources>

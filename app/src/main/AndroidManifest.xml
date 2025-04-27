@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+
+    <application
+        android:name=".ATCAdaptorApplication"
+        android:allowBackup="true"
+        android:fitsSystemWindows="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/atc_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/atc_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ATCAdaptor"
+        tools:targetApi="31">
+        <activity
+            android:name=".presentation.authentication.AuthActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ATCAdaptor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".presentation.mainApp.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ATCAdaptor">
+        </activity>
+
+        <activity
+            android:name=".presentation.mainApp.scanner.QRCodeScannerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ATCAdaptor">
+        </activity>
+
+        <service
+            android:name=".messaging.MyFirebaseMessagingService"
+            android:exported="true"
+            android:permission="TODO"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+
+    </application>
+
+</manifest>
