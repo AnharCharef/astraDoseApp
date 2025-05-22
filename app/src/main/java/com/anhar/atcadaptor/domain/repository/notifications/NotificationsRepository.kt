@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface NotificationsRepository  {
 
-     fun getNotifications(userId : Int) : Flow<Resource<NotificationsResponse>>
+     fun getNotifications(userId : Int , userType : String) : Flow<Resource<NotificationsResponse>>
      fun sendNotification(topic : String ,title : String , body : String , sender: String) : Flow<Resource<StandardResponse>>
      fun updateNotification(userId : Int)
 

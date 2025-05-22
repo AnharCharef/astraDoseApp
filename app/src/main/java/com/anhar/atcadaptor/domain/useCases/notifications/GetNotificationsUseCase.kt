@@ -5,8 +5,8 @@ import com.anhar.atcadaptor.domain.repository.notifications.NotificationsReposit
 class GetNotificationsUseCase(
     private val notificationsRepository: NotificationsRepository
 ) {
-     operator fun invoke(userId : Int) =
-         notificationsRepository.getNotifications(userId = userId)
+     operator fun invoke(userId : Int , userType : String ) =
+         notificationsRepository.getNotifications(userId = userId , userType = userType)
 
 
 }

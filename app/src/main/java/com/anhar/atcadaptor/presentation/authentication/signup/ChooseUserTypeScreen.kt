@@ -104,13 +104,12 @@ class ChooseUserTypeScreen : Screen {
                     modifier = Modifier.padding(top = SmallPadding)
                 )
 
-                Icon(
+                Image(
                     painterResource(R.drawable.atc_logo),
                     contentDescription = null,
                     modifier = Modifier
                         .size(250.dp).
-                    offset(y = (-15).dp),
-                    tint = MaterialTheme.colorScheme.primary
+                    offset(y = (-15).dp)
                 )
 //                Spacer(modifier = Modifier.weight(0.2f))
 
@@ -119,7 +118,7 @@ class ChooseUserTypeScreen : Screen {
                     navigator.push(SignUpScreen(userType = UserRole.Doctor))
                 }, modifier = Modifier.padding(bottom = MediumPadding).width(150.dp)) {
                     Text(
-                        "Médecin",
+                        "Doctor",
                         style = MaterialTheme.typography.bodyMedium.copy(
                             fontWeight = FontWeight.Bold
                         ),

@@ -89,7 +89,7 @@ class PatientDetailsScreen(
                             items = listOf(
                                 Pair("📧 Email: ", state.patientData?.userEmail ?: ""),
                                 Pair("📞 Phone: ", state.patientData?.userPhone ?: ""),
-                                Pair("📅 Date Of Birth: ", state.patientData?.dateNaissance ?: ""),
+                                Pair("📅 Date Of Birth: ", state.patientData?.age ?: ""),
                                 Pair("🧬 Gender: ", state.patientData?.genre ?: ""),
                                 Pair("🌍 Race: ", state.patientData?.race ?: "")
                             )

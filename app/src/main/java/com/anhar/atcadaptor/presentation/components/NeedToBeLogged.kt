@@ -61,7 +61,7 @@ fun NeedToBeLogged(modifier: Modifier = Modifier,goToLoginScreen: ()-> Unit , on
 
             // Titre
             Text(
-                text = "Un compte est requis",
+                text = "An account is required",
                 style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
                 textAlign = TextAlign.Center
             )
@@ -70,7 +70,7 @@ fun NeedToBeLogged(modifier: Modifier = Modifier,goToLoginScreen: ()-> Unit , on
 
             // Sous-titre
             Text(
-                text = "Créez un compte ou connectez-vous pour accéder à cette fonctionnalité.",
+                text = "Create an account or log in to access this feature.",
                 style = MaterialTheme.typography.bodyMedium.copy(
                     color = colorResource(R.color.body)
                 ),
@@ -87,7 +87,7 @@ fun NeedToBeLogged(modifier: Modifier = Modifier,goToLoginScreen: ()-> Unit , on
                 modifier = Modifier.padding(horizontal = MediumPadding),
                 shape = CircleShape
             ) {
-                Text("Créer un compte" , style = MaterialTheme.typography.bodyMedium.copy(
+                Text("Create an account" , style = MaterialTheme.typography.bodyMedium.copy(
                     fontWeight = FontWeight.Bold
                 ))
             }

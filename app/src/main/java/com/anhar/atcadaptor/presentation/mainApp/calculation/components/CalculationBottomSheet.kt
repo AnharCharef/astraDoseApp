@@ -282,7 +282,7 @@ fun CalculationBottomSheet(
                 ) {
 
                     if(state.isLoading){
-
+                        CustomCircularProgress(isLoading = state.isLoading)
                     }else {
                         AnimatedVisibility(!imeVisible) {
                             Card(

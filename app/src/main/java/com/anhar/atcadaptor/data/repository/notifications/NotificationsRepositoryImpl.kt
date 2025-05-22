@@ -9,8 +9,8 @@ import com.anhar.atcadaptor.domain.repository.notifications.NotificationsReposit
 import kotlinx.coroutines.flow.Flow
 
 class NotificationsRepositoryImpl(private val service: AlertService) : NotificationsRepository {
-    override fun getNotifications(userId: Int): Flow<Resource<NotificationsResponse>> {
-        return service.getNotifications(userId = userId)
+    override fun getNotifications(userId: Int , userType : String ): Flow<Resource<NotificationsResponse>> {
+        return service.getNotifications(userId = userId , userType = userType)
     }
 
     override fun updateNotification(userId: Int) {

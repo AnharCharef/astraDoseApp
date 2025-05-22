@@ -19,8 +19,8 @@ class AlertViewModel @Inject constructor(
     val state : State<AlertState> = _state
 
 
-     fun getNotifications(userId: Int) {
-        notificationsUseCases.getNotifications(userId).onEach {result->
+     fun getNotifications(userId: Int , userType : String) {
+        notificationsUseCases.getNotifications(userId , userType).onEach {result->
             when(result){
                 is Resource.Loading -> {
                     _state.value = state.value.copy(

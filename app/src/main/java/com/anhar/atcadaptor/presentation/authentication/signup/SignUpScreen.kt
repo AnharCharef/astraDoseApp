@@ -157,13 +157,12 @@ data class SignUpScreen(private val userType: UserRole) : Screen {
                 ) {
                     Spacer(modifier = Modifier.weight(1f))
 
-                    Icon(
+                    Image(
                         painterResource(R.drawable.atc_logo), contentDescription = null,
                         modifier = Modifier
                             .size(250.dp)
                             .align(Alignment.CenterHorizontally)
-                            .offset(y = 30.dp),
-                        tint = MaterialTheme.colorScheme.primary
+                            .offset(y = 30.dp)
                     )
 
                     //User Name

@@ -22,17 +22,19 @@ import kotlinx.serialization.SerializationException
 class AlertService (private val client : HttpClient){
 
 
-     fun getNotifications(userId: Int): Flow<Resource<NotificationsResponse>> =
+     fun getNotifications(userId: Int , userType : String ): Flow<Resource<NotificationsResponse>> =
         flow {
             try {
                 emit(Resource.Loading())
                 @Serializable
                 data class Body(
                     val userId: Int,
+                    val userType : String
                 )
 
                 val body = Body(
-                    userId = userId
+                    userId = userId ,
+                    userType = userType
                 )
 
                 val response = client.post(GET_NOTIFICATIONS_URL) {

@@ -12,7 +12,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -26,7 +28,6 @@ import com.anhar.atcadaptor.common.Dimens.SmallPadding
 
 @Composable
 fun WelcomeScreen(modifier: Modifier = Modifier) {
-
 
     LazyColumn(
         modifier = modifier
@@ -45,15 +46,14 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
                     painter = painterResource(id = R.drawable.atc_logo),
                     contentDescription = null,
                     modifier = Modifier.size(150.dp),
-                    contentScale = ContentScale.Fit,
-                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary),
+                    contentScale = ContentScale.Fit
                 )
                 Column(
                     verticalArrangement = Arrangement.SpaceAround,
                     modifier = Modifier.padding(top = SmallPadding)
                 ) {
                     Text(
-                        text = "ATC-Adaptor",
+                        text = stringResource(R.string.app_name) ,
 
                         style = MaterialTheme.typography.titleMedium.copy(
                             fontWeight = FontWeight.Bold,

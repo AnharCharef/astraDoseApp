@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name" translatable="false">ATC Adaptor</string>
+    <string name="app_name" translatable="false">Astra Dose</string>
     <string name="continuee">Continue</string>
     <string name="selectLanguage">Select Language</string>
     <string name="english">English</string>
     <string name="arabic">Arabic</string>
-    <string name="signin">Sign In</string>
+    <string name="signin">Login</string>
     <string name="welcomeBack">Welcome back</string>
     <string name="signInBodyText">Sign in with your email and password or continue as a guest</string>
     <string name="signUpBodyText">Sign up with your information or continue with social networks</string>

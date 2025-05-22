@@ -49,6 +49,7 @@ import com.anhar.atcadaptor.common.Dimens.MediumPadding
 import com.anhar.atcadaptor.presentation.components.CustomTextField
 
 import com.anhar.atcadaptor.presentation.authentication.verification.VerificationEmailForgotPasswordScreen
+import com.anhar.atcadaptor.presentation.components.CustomCircularProgress
 import kotlinx.coroutines.launch
 import java.util.Locale
 
@@ -126,95 +127,101 @@ class CheckEmailValidationScreen : Screen {
 
                 }) { innerPadding ->
                 val scrollState = rememberScrollState()
+                if (state.isLoading) {
+                    CustomCircularProgress(state.isLoading)
+                } else {
 
-                Column(
-                    modifier = Modifier
-                        .padding(
-                            horizontal = Dimens.LargePadding
-                        )
-                        .padding(
-                            bottom = innerPadding.calculateBottomPadding()
-                        )
-                        .fillMaxSize()
-                        .verticalScroll(state = scrollState, enabled = true)
-                ) {
-
-                    Text(
-                        text = stringResource(id = R.string.checkEmail),
-                        style = MaterialTheme.typography.displayMedium.copy(fontWeight = FontWeight.Bold,
-                            ),
+                    Column(
                         modifier = Modifier
-                            .fillMaxWidth()
                             .padding(
-                                top = innerPadding
-                                    .calculateTopPadding()
-                                    .plus(LargePadding),
-                                end = Dimens.LargePadding,
-                                start = Dimens.LargePadding
-                            ),
-                        textAlign = TextAlign.Center
-                    )
-                    Text(
-                        text = stringResource(id = R.string.forgotPasswordBodyText),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = Color.Gray,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(
-                                start = Dimens.LargePadding,
-                                end = Dimens.LargePadding
-                            ),
-                        textAlign = TextAlign.Center
-                    )
-
-                    //Email
-                    CustomTextField(
-                        modifier = Modifier.padding(top = MediumPadding),
-                        value = state.email,
-                        label = stringResource(id = R.string.email),
-                        placeholder = stringResource(id = R.string.enterYourEmail),
-                        trailingIcon = Icons.Outlined.Email,
-                        onValueChange = { value ->
-                            viewModel.updateEmail(value)
-                        },
-                        isError = !state.emailError.isNullOrEmpty(),
-                        isPassword = false,
-                        errorMessage = state.emailError ?: ""
-                    )
-                    val context = LocalContext.current
-
-                    Button(
-                        onClick = {
-                            if (
-                                viewModel.checkEmail(
-                                    email = state.email, context
-                                )
-                            ) {
-                               scope.launch {
-                                   viewModel.checkEmail(state.email)
-                               }
-
-                            }
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(
-                                horizontal = Dimens.LargePadding,
-                                vertical = Dimens.MediumPadding
-                            ),
-                        shape = RoundedCornerShape(30)
-                    ) {
-                        Text(
-                            text = stringResource(id = R.string.continuee),
-                            Modifier.padding(vertical = Dimens.ExtraSmallPadding),
-                            style = MaterialTheme.typography.displaySmall.copy(
-                                fontWeight = FontWeight.Bold
+                                horizontal = Dimens.LargePadding
                             )
-                        )
-                    }
+                            .padding(
+                                bottom = innerPadding.calculateBottomPadding()
+                            )
+                            .fillMaxSize()
+                            .verticalScroll(state = scrollState, enabled = true)
+                    ) {
 
+                        Text(
+                            text = stringResource(id = R.string.checkEmail),
+                            style = MaterialTheme.typography.displayMedium.copy(
+                                fontWeight = FontWeight.Bold,
+                            ),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(
+                                    top = innerPadding
+                                        .calculateTopPadding()
+                                        .plus(LargePadding),
+                                    end = Dimens.LargePadding,
+                                    start = Dimens.LargePadding
+                                ),
+                            textAlign = TextAlign.Center
+                        )
+                        Text(
+                            text = stringResource(id = R.string.forgotPasswordBodyText),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = Color.Gray,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(
+                                    start = Dimens.LargePadding,
+                                    end = Dimens.LargePadding
+                                ),
+                            textAlign = TextAlign.Center
+                        )
+
+                        //Email
+                        CustomTextField(
+                            modifier = Modifier.padding(top = MediumPadding),
+                            value = state.email,
+                            label = stringResource(id = R.string.email),
+                            placeholder = stringResource(id = R.string.enterYourEmail),
+                            trailingIcon = Icons.Outlined.Email,
+                            onValueChange = { value ->
+                                viewModel.updateEmail(value)
+                            },
+                            isError = !state.emailError.isNullOrEmpty(),
+                            isPassword = false,
+                            errorMessage = state.emailError ?: ""
+                        )
+                        val context = LocalContext.current
+
+                        Button(
+                            onClick = {
+                                if (
+                                    viewModel.checkEmail(
+                                        email = state.email, context
+                                    )
+                                ) {
+                                    scope.launch {
+                                        viewModel.checkEmail(state.email)
+                                    }
+
+                                }
+                            },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(
+                                    horizontal = Dimens.LargePadding,
+                                    vertical = Dimens.MediumPadding
+                                ),
+                            shape = RoundedCornerShape(30)
+                        ) {
+                            Text(
+                                text = stringResource(id = R.string.continuee),
+                                Modifier.padding(vertical = Dimens.ExtraSmallPadding),
+                                style = MaterialTheme.typography.displaySmall.copy(
+                                    fontWeight = FontWeight.Bold
+                                )
+                            )
+                        }
+
+                    }
                 }
             }
+
         }
     }
 }

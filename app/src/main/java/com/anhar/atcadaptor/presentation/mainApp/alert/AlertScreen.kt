@@ -36,9 +36,10 @@ class AlertScreen : Screen {
         val viewModel = navigator.getNavigatorScreenModel<AlertViewModel>()
         val state by viewModel.state
         val userId = context.getSharedPreferences(APP_ENTRY, 0).getString("userId", "")
+        val userType = context.getSharedPreferences(APP_ENTRY, 0).getString("userType", "")
         LaunchedEffect(Unit) {
             userId?.let {
-                viewModel.getNotifications(userId = it.toInt())
+                viewModel.getNotifications(userId = it.toInt() , userType.toString() )
             }
         }
         LaunchedEffect(state.notifications) {

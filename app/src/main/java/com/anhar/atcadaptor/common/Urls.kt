@@ -2,7 +2,7 @@ package com.anhar.atcadaptor.common
 
 object Urls {
 
-    private const val BASE_URL = "http://192.168.0.58:8080/atc_adaptor/"
+    private const val BASE_URL = "http://192.168.40.6:8080/atc_adaptor/"
 
     /** auth urls */
     const val SIGNUP_URL = "$BASE_URL/auth/signup.php"

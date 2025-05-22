@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -120,12 +121,12 @@ class LoginScreen : Screen {
             ) {
                 Spacer(modifier = Modifier.weight(1f))
 
-                Icon(painterResource(R.drawable.atc_logo) , contentDescription = null ,
+                Image(painterResource(R.drawable.atc_logo) , contentDescription = null ,
                     modifier = Modifier
                         .size(250.dp)
                         .align(Alignment.CenterHorizontally)
                         .offset(y = 30.dp),
-                    tint = MaterialTheme.colorScheme.primary)
+                )
 //                Text(
 //                    text = stringResource(id = R.string.welcomeBack),
 //                    style = MaterialTheme.typography.displayMedium.copy(fontWeight = FontWeight.Bold),
