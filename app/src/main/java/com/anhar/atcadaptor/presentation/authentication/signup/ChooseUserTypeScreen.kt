@@ -96,7 +96,7 @@ class ChooseUserTypeScreen : Screen {
 
 
                 Text(
-                    text = "Choisissez votre type d'utilisateur :",
+                    text = "Choose your user type" ,
                     style = MaterialTheme.typography.displayMedium.copy(
                         fontWeight = FontWeight.Bold
                     ) ,
